@@ -106,7 +106,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     main(args.input_file, args.output_file, args.dilation_mm)
-
+```
 
 ## Surface Modal Smoothing
 
@@ -223,3 +223,4 @@ if __name__ == "__main__":
         args.output_file = f"{base}_ssm{args.filter_size}{ext}"
 
     main(args.surface_file, args.roi_file, args.output_file, args.filter_size)
+```
