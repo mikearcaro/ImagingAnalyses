@@ -69,7 +69,7 @@ The script will automatically check for these dependencies and install them if t
         │   └── ...
 ```
 
-Script Configuration
+##  Script Configuration
 In the script, ensure the following variables are correctly set:
 
 
@@ -82,13 +82,12 @@ Running the Script
 Execute the script:
 ``` 
 ``` bash
-Copy code
 python deformT1.py
 ```
 
 This will process all paired T1 images and masks, apply the specified transformations, and save the results in the output directory.
 
-Notes
+##  Notes
 The script ensures that the T1 and mask files are correctly paired based on their filenames.
 The transformations are applied in parallel to utilize multiple CPU cores for faster processing.
 The script generates various versions of the images with different deformations, intensity biases, rotations, and noise levels.
