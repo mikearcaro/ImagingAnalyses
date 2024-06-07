@@ -1,6 +1,6 @@
 # MRI Augmentation and Deformation Script
 
-This script performs a variety of augmentation and deformation operations on MRI images and their corresponding masks. It generates multiple versions of the images with different deformations, intensity biases, rotations, and noise levels. This script is designed to create synthetic imaging data with realistic brain properties, which can be used to train image segmentation algorithms when only limited samples are available.
+This script performs a variety of augmentation and deformation operations on MRI images and their corresponding masks. It generates multiple versions of the images with different nonlinear deformations, intensity biases, rotations, and noise levels. This script is designed to create synthetic imaging data with realistic brain properties, which can be used to train image segmentation algorithms when only limited samples are available. The script has been tested on T1 MPRAGES and EPIs, but should work on an image type.
 
 The script leverages tools from the antspyx package and uses parallel processing to handle multiple files efficiently, ensuring faster processing times.
 
