@@ -90,5 +90,5 @@ python deformT1.py
 This will process all paired T1 images and masks, apply the specified transformations, and save the results in the output directory.
 
 ##  Notes
-The script ensures that the T1 and mask files are correctly paired based on their filenames.
-The transformations are applied in parallel to utilize multiple CPU cores for faster processing.
+- The script ensures that the T1 and mask files are correctly paired based on their filenames.
+- The transformations are applied in parallel to utilize multiple CPU cores for faster processing.
