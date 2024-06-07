@@ -67,22 +67,25 @@ The script will automatically check for these dependencies and install them if t
         ├── masks/
         │   ├── subject1_meanTP_mask_cortex_123456_deformed_1_bias_0_rot_0.nii.gz
         │   └── ...
-
+```
 
 Script Configuration
 In the script, ensure the following variables are correctly set:
 
-python
+
+``` python
 Copy code
 T1_DIRECTORY = '/path/to/T1_images'
 MASK_DIRECTORY = '/path/to/masks'
 OUTPUT_DIRECTORY = '/path/to/output'
 Running the Script
 Execute the script:
-
-bash
+``` 
+``` bash
 Copy code
 python deformT1.py
+```
+
 This will process all paired T1 images and masks, apply the specified transformations, and save the results in the output directory.
 
 Notes
