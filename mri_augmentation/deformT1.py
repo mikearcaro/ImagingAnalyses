@@ -41,8 +41,8 @@ NOISE_VARIANCES = [0.001, 0.01, 0.1]  # Different levels of speckle noise varian
 NUM_CPUS = 4  # Number of CPUs to use for parallel processing
 
 # Common aspects of filenames
-T1_PATTERN = re.compile(r'(.+)_meanTP_\d{6}\.nii\.gz')
-MASK_PATTERN = re.compile(r'(.+)_meanTP_mask_[^_]+_\d{6}\.nii\.gz')
+T1_PATTERN = re.compile(r'(.+)_meanTP_(\d{6})\.nii\.gz')
+MASK_PATTERN = re.compile(r'(.+)_meanTP_mask_[^_]+_(\d{6})\.nii\.gz')
 
 def generate_bias_field(image, max_bias=MAX_BIAS):
     """
@@ -161,7 +161,7 @@ def check_matching_files(t1_file, mask_file):
     mask_match = re.match(MASK_PATTERN, os.path.basename(mask_file))
     if not t1_match or not mask_match:
         return False
-    return t1_match.group(1) == mask_match.group(1)
+    return t1_match.group(1) == mask_match.group(1) and t1_match.group(2) == mask_match.group(2)
 
 # Processing function for parallel execution
 def process_file_pair(t1_file, mask_file):
@@ -274,3 +274,4 @@ with concurrent.futures.ProcessPoolExecutor(max_workers=NUM_CPUS) as executor:
         future.result()  # Raise any exceptions encountered during processing
 
 print('All MRI files have been processed.')
+
