@@ -30,7 +30,7 @@ This script is designed to segment brain slices from histological images, creati
 2. **User-defined Variables**:
     ```python
     # Base directory containing the images to process
-    BASE_DIRECTORY = "/Users/macmini_m1/Desktop/histology_alignment/orig"
+    BASE_DIRECTORY = ""
 
     # Directory where masks will be saved
     MASKS_DIR = os.path.join(BASE_DIRECTORY, "masks")
@@ -62,17 +62,17 @@ This script is designed to segment brain slices from histological images, creati
 
 1. **Run the Script**:
     ```bash
-    python segment_brain_slice_batch.py
+    python brain_segmentation.py
     ```
 
 2. **With Debug Mode**:
     ```bash
-    python segment_brain_slice_batch.py debug
+    python brain_segmentation.py debug
     ```
 
 3. **Start from a Specific Image**:
     ```bash
-    python segment_brain_slice_batch.py Slice0112_co.png
+    python brain_segmentation.py Slice0112_co.png
     ```
 
 4. **Interactive Segmentation**:
@@ -102,12 +102,12 @@ This script performs slice-by-slice alignment of brain images using SIFT (Scale-
 ### Setup
 
 1. **Directory Structure**:
-    - Ensure your brain slice images are stored in a directory, e.g., `/path/to/histology_alignment/orig/masked`.
+    - Ensure your brain slice images are stored in a directory, e.g., `/path/to/histology_alignment/masked`.
 
 2. **User-defined Variables**:
     ```python
     # Directory containing the input images
-    INPUT_DIRECTORY = "/Users/macmini_m1/Desktop/histology_alignment/orig/masked"
+    INPUT_DIRECTORY = ""
 
     # Filename of the reference slice
     REF_SLICE = "Slice0111_co.png"
@@ -120,7 +120,7 @@ This script performs slice-by-slice alignment of brain images using SIFT (Scale-
     SCALE_FACTOR = 0.25
 
     # Directory to save the output aligned images
-    OUTPUT_DIRECTORY = "cv_aligned"
+    OUTPUT_DIRECTORY = "sift_aligned"
 
     # Suffix to append to the output aligned images
     OUTPUT_PREFIX = "_aligned"
@@ -159,12 +159,12 @@ This script performs diffeomorphic registration on a series of brain slice image
 ### Setup
 
 1. **Directory Structure**:
-    - Ensure your brain slice images are stored in a directory, e.g., `/path/to/histology_alignment/orig/masked/cv_aligned`.
+    - Ensure your brain slice images are stored in a directory, e.g., `/path/to/histology_alignment/orig/masked/sift_aligned`.
 
 2. **User-defined Variables**:
     ```python
     # Directory containing the input images
-    INPUT_DIRECTORY = "/Users/macmini_m1/Desktop/histology_alignment/orig/masked/cv_aligned"
+    INPUT_DIRECTORY = ""
 
     # Filename of the reference slice
     REF_SLICE = "Slice0111_co_aligned.png"
