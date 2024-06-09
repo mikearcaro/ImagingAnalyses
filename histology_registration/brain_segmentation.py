@@ -1,3 +1,14 @@
+import os
+import cv2
+import numpy as np
+from skimage import measure
+from skimage.segmentation import flood
+from matplotlib.widgets import LassoSelector, Slider, Button
+from matplotlib.path import Path
+import matplotlib.pyplot as plt
+import sys
+import re
+
 """
 This script is used for segmenting brain slices from histological images. 
 The primary objective is to generate masks for each brain slice, 
@@ -49,18 +60,6 @@ ZOOM_LEVEL = 0.1
 
 # Enable or disable debug mode
 DEBUG_MODE = False
-
-
-import os
-import cv2
-import numpy as np
-from skimage import measure
-from skimage.segmentation import flood
-from matplotlib.widgets import LassoSelector, Slider, Button
-from matplotlib.path import Path
-import matplotlib.pyplot as plt
-import sys
-import re
 
 # Initialize directories
 os.makedirs(MASKS_DIR, exist_ok=True)
