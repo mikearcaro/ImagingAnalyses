@@ -37,7 +37,7 @@ User-defined variables:
 """
 
 # Directory containing the input images
-INPUT_DIRECTORY = "/Users/macmini_m1/Desktop/histology_alignment/orig/masked/sift_aligned/"
+INPUT_DIRECTORY = ""
 
 # Filename of the reference slice
 REF_SLICE = "Slice0111_co_aligned.png"

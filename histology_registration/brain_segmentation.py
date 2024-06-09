@@ -21,7 +21,7 @@ to write the mask and histology masked files
 """
 
 # The base directory containing the images to process
-BASE_DIRECTORY = "/Users/macmini_m1/Desktop/histology_alignment/orig"
+BASE_DIRECTORY = ""
 
 # The directory where masks will be saved
 MASKS_DIR = os.path.join(BASE_DIRECTORY, "masks")
