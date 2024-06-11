@@ -1,6 +1,6 @@
 ### README
 
-This script processes brain regions of interest (ROIs) data on the right hemisphere using Nibabel. It generates ROI annotations for surface-based analysis. It assumes a specific folder / data organization structure that is unlieky to generalize.
+This script processes converts 1D.dset files (AFNI/SUMA) to annot (FreeSurfer). It generates ROI annotations for surface-based analysis. It assumes a specific folder / data organization structure that is unlieky to generalize.
 
 #### Requirements
 - Python 3.x
